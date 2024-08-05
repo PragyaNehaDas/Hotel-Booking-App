@@ -1,0 +1,105 @@
+###
+GET http://localhost:5000/api/rooms
+
+#create room
+###
+POST http://localhost:5000/api/rooms
+Content-Type: application/json
+
+{
+    "name": "test room",
+    "price": 100,
+    "des": "beautiful in-house room",
+    "roomNumbers": [{
+        "number": 101,
+        "unavailableDates": ["2024-01-24", "2024-01-26"]
+    }]
+}
+
+#get single room
+###
+GET http://localhost:5000/api/rooms/66b06c1e64b5d61d573123fe
+
+#update room
+###
+PUT http://localhost:5000/api/rooms/66b06c1e64b5d61d573123fe
+Content-Type: application/json
+
+{
+    "name": "update room",
+    "price": 500
+}
+
+#delete room
+###
+DELETE http://localhost:5000/api/rooms/66b06c1e64b5d61d573123fe
+
+
+#get booking
+###
+GET http://localhost:5000/api/bookings
+
+#get single booking
+###
+GET http://localhost:5000/api/bookings/66b0b3569bcacb4c8abf6c05
+
+#create booking
+###
+POST http://localhost:5000/api/bookings
+Content-Type: application/json
+
+{
+    "roomId": "66b07dd659b7f6dfdc7f0239",
+    "name": "john doe",
+    "email": "john@gmail.com",
+    "checkInDate": "2024-02-25",
+    "checkOutDate": "2024-02-26"
+}
+
+#update booking
+###
+PUT http://localhost:5000/api/bookings/66b082daf3311247a23ccfdf
+Content-Type: application/json
+
+{
+    "name": "updated name",
+    "email": "updated@gmail.com"
+}
+
+#delete booking
+###
+DELETE http://localhost:5000/api/bookings/66b0b3569bcacb4c8abf6c05
+
+
+#get users
+###
+GET http://localhost:5000/api/users
+
+#create user
+###
+POST  http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name": "Jordan Miller",
+    "email": "jordan@gmail.com",
+    "password": "nancy123"
+}
+
+#login user
+###
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "jordan@gmail.com",
+    "password": "nancy123"
+}
+
+#logout user
+###
+GET http://localhost:5000/api/users/logout
+
+#authenticate user
+###
+GET http://localhost:5000/auth
