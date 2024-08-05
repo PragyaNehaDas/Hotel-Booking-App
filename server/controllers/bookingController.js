@@ -12,7 +12,7 @@ const getBookings = async (req, res, next) => {
     } catch (error) {
         next(error);
     }
-}
+};
 
 //create booking
 const createBooking = async(req, res, next) =>{
@@ -29,7 +29,7 @@ const createBooking = async(req, res, next) =>{
     } catch (error) {
         next(error)
     }
-}
+};
 
 //update booking
 
@@ -54,7 +54,7 @@ const updateBooking = async(req, res, next) =>{
     } catch (error) {
         next(error)
     }
-}
+};
 
 //delete booking
 
@@ -71,7 +71,7 @@ const deleteBooking = async (req, res, next) => {
     } catch (error) {
         next(error);
     }
-}
+};
 
 //get single booking
 const getBooking = async (req, res, next) =>{
@@ -86,11 +86,11 @@ const getBooking = async (req, res, next) =>{
     } catch (error) {
         next(error)
     }
-}
+};
 module.exports = {
     getBookings,
     createBooking,
     updateBooking,
     deleteBooking,
     getBooking,
-}
+};
